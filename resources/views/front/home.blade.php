@@ -1,5 +1,7 @@
 @extends('front.layout')
-
+@section('title')
+    首页
+@endsection
 @section('content')
 
 

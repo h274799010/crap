@@ -1,6 +1,8 @@
 @extends('front.layout')
 
-
+@section('title')
+    {{$post->title}}
+@endsection
 
 @section('content')
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Hash::
 //        dd(Post::paginate(4));
 //        dd(Post::orderBy('hot','desc')->get()->slice(0,6));
 
