@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        Hash::
+//        Hash::
 //        dd(Post::paginate(4));
 //        dd(Post::orderBy('hot','desc')->get()->slice(0,6));
 

@@ -31,12 +31,12 @@
                     <div class="post">
                         <h2 class="title"><a href="{{route('post.show',$post->id)}}">{{$post->title}}</a></h2>
                         <div>
-                            <div class="chip z-depth-1  green  white-text">
+                            <div class="chip z-depth-1  blue  white-text">
                                 {{date("M j Y",strtotime($post->created_at))}}
                             </div>
                             @foreach($post->tags as $tag)
 
-                                <div class="chip z-depth-1 green  ">
+                                <div class="chip z-depth-1 blue  ">
                                     <a href="{{route('tag.show',$tag->id)}}" class="white-text">{{$tag->tag}}</a>
                                 </div>
 
@@ -64,7 +64,7 @@
                     <ul>
                         <li class="side-title">标签</li>
                         @foreach(\App\Tag::all() as $tag)
-                            <a href="{{route('tag.show',$tag->id)}}" class="chip green white-text">{{$tag->tag}}</a>
+                            <a href="{{route('tag.show',$tag->id)}}" class="chip blue white-text">{{$tag->tag}}</a>
                         @endforeach
                     </ul>
                 </div>

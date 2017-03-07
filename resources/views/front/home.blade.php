@@ -30,12 +30,12 @@
                     <div class="post">
                         <h2 class="title"><a href="{{route('post.show',$post->id)}}">{{$post->title}}</a></h2>
                         <div>
-                            <div class="chip z-depth-1 green   white-text">
+                            <div class="chip z-depth-1 blue   white-text">
                                 {{date("M j Y",strtotime($post->created_at))}}
                             </div>
                             @foreach($post->tags as $tag)
 
-                                <div class="chip z-depth-1 green  hoverable">
+                                <div class="chip z-depth-1 blue  hoverable">
                                     <a href="{{route('tag.show',$tag->id)}}" class="white-text">{{$tag->tag}}</a>
                                 </div>
 
@@ -47,10 +47,10 @@
                 @endforeach
                 <div class="paginator-wrapper">
                     @if($posts->currentPage()>1)
-                        <a class="left btn paginator green  hoverable" href="{{$posts->previousPageUrl()}}">上一页</a>
+                        <a class="left btn paginator blue  hoverable" href="{{$posts->previousPageUrl()}}">上一页</a>
                     @endif
                     @if($posts->currentPage()!=$posts->lastPage())
-                        <a class="right btn paginator green  hoverable" href="{{$posts->nextPageUrl()}}">下一页</a>
+                        <a class="right btn paginator blue  hoverable" href="{{$posts->nextPageUrl()}}">下一页</a>
                     @endif
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <ul>
                         <li class="side-title">标签</li>
                         @foreach(\App\Tag::all() as $tag)
-                            <a href="{{route('tag.show',$tag->id)}}" class="chip green  hoverable white-text">{{$tag->tag}}</a>
+                            <a href="{{route('tag.show',$tag->id)}}" class="chip blue  hoverable white-text">{{$tag->tag}}</a>
                         @endforeach
                     </ul>
                 </div>

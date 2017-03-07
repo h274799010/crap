@@ -13,7 +13,7 @@
                 <h1 class="title">{{$post->title}}</h1>
                 <div>
                     @foreach($post->tags as $tag)
-                        <div class="chip z-depth-1 green ">
+                        <div class="chip z-depth-1 blue hoverable ">
                             <a href="{{route('tag.show',$tag->id)}}" class="white-text">{{$tag->tag}}</a>
                         </div>
 
@@ -36,7 +36,7 @@
                         <label for="textarea1">评论框</label>
                     </div>
                     <div class="input-field">
-                        <input type="submit" class="btn green paginator">
+                        <input type="submit" class="btn blue paginator">
                     </div>
                 </form>
 
