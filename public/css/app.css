@@ -63,6 +63,10 @@ footer{
 }
 #hot-post-text,#comment-text{
     color: #616161 !important;
+
+}
+#comment-text:hover{
+    text-decoration: underline;
 }
 #hot-post-text:hover{
     text-decoration: underline;
@@ -77,6 +81,7 @@ h1,h2,h3,h4{
 }
 .comments{
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .comments a{
     color: black;

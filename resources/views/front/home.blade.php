@@ -74,8 +74,8 @@
                 <div class="panel">
                     <ul>
                         <li class="side-title">最新评论</li>
-                        @foreach(\App\Comment::orderBy('created_at')->get()->slice(0,8) as $comment)
-                        <li id="comment-text">{{strlen($comment->comment)>16?mb_substr($comment->comment,0,16)."...":$comment->comment}}</li>
+                        @foreach(\App\Comment::orderBy('created_at','desc')->get()->slice(0,8) as $comment)
+                        <li ><a href="{{route('post.show',$comment->post->id)}}" id="comment-text">{{strlen($comment->comment)>16?mb_substr($comment->comment,0,16)."...":$comment->comment}}</a></li>
                         @endforeach
                     </ul>
                 </div>
