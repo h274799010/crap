@@ -1,7 +1,6 @@
 # Crap
-
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-
+![](https://raw.githubusercontent.com/loveship00/cheaptalks/master/preview.png)
 ## Demo
 [http://blog.ysd-pk.com/](http://blog.ysd-pk.com/)
 
