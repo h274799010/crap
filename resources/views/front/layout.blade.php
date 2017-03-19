@@ -20,8 +20,8 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{url('home')}}">首页</a></li>
-            <li><a  href="#" id="contact" >联系</a></li>
-            <li><a href="#" id="about" >关于</a></li>
+            <li><a  href="#" onclick="contact()">联系</a></li>
+            <li><a href="#" onclick="about()">关于</a></li>
             <li><a class="btn blue accent-2" href="{{url('subscribe')}}">订阅我</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -40,25 +40,19 @@
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/materialize.min.js')}}"></script>
 <script>
-    $(document).ready(function () {
-        $(".button-collapse").sideNav();
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
-        $('#contact').on('click',function () {
-            Materialize.toast('不要尝试联系我', 3000)
+    $(".button-collapse").sideNav();
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    @if(Session::exists('toast'))
+           Materialize.toast('{{Session::get('toast')}}', 3000)
+    @endif
 
-        })
-        $('#about').on('click',function () {
-            Materialize.toast('啥都没有', 3000)
+    function contact() {
+           Materialize.toast('不要尝试联系我', 3000)
+    }
+    function about() {
+        Materialize.toast('啥都没有', 3000)
 
-        })
-        @if(Session::exists('toast'))
-         Materialize.toast('{{Session::get('toast')}}', 3000)
-        @endif
-    })
-
-
-
-//
+    }
 </script>
 </body>
 </html>
